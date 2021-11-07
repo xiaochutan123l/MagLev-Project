@@ -4,7 +4,7 @@ MagLev-Project
 
 Pull-up magnetic levitation based on Arduino board.
 
-[![Watch the video](https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/youtube.jpg)](https://youtu.be/WY3Qidg5Ipc)
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/youtube.jpg" style="zoom:30%;" />(https://youtu.be/WY3Qidg5Ipc)
 
 ## Introduction
 
@@ -16,7 +16,7 @@ There two types of magnet levitation principle: `Pull-up` and `Push-down`. This 
 
 ## Principle
 
-![](https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/principle.gif)
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/principle.gif" style="zoom:30%;" />
 
 #### #TODO add description
 
@@ -24,13 +24,9 @@ There two types of magnet levitation principle: `Pull-up` and `Push-down`. This 
 
 ## Hardware components
 
-<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG" style="zoom:15%;" />
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG" style="zoom:12%;" />
 
-
-
-![](https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG)
-
-![](https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/top-view2.jpg)
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/top-view2.jpg" style="zoom:12%;" />
 
 #### 1. Arduino Uno (it can be any MCU)
 
