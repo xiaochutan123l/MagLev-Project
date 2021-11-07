@@ -24,6 +24,10 @@ There two types of magnet levitation principle: `Pull-up` and `Push-down`. This 
 
 ## Hardware components
 
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG" style="zoom:15%;" />
+
+
+
 ![](https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG)
 
 ![](https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/top-view2.jpg)
@@ -32,7 +36,7 @@ There two types of magnet levitation principle: `Pull-up` and `Push-down`. This 
 
 #### 2. Hall sensor
 
-I use 49E011BD, other Linear Hall effect sensors with similar Supply Voltage (3 - 6.5V) are also suitable.
+I use `49E011BD`, other Linear Hall effect sensors with similar Supply Voltage (3 - 6.5V) are also suitable.
 
 Hall sensor can detect and transfer the magnetic field to voltage signal. It's used to detect the position of the floater.
 
@@ -44,7 +48,7 @@ Since the Hall sensor can only output a very small range of voltage, a OP amplif
 
 #### 4. Motor driver module
 
- L298N Motor driver module, it provides H-Bridge DC Motor Control, it's used to drive the copper coil as a electromagnet. Pull-up type requires only one copper coil, so only half of the H-Bridge is needed.
+ `L298N` Motor driver module, it provides H-Bridge DC Motor Control, it's used to drive the copper coil as a electromagnet. Pull-up type requires only one copper coil, so only half of the H-Bridge is needed.
 
 #### 5. Magnet
 
