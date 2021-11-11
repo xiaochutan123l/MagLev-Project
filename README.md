@@ -1,6 +1,6 @@
 MagLev-Project
 
-[中文版](https://github.com/xiaochutan123l/MagLev-Project/blob/main/docs/%E4%B8%8A%E6%8B%89%E5%BC%8F%E7%A3%81%E6%82%AC%E6%B5%AE.md)
+[中文版Chinese](https://github.com/xiaochutan123l/MagLev-Project/blob/main/docs/%E4%B8%8A%E6%8B%89%E5%BC%8F%E7%A3%81%E6%82%AC%E6%B5%AE.md)
 
 Pull-up magnetic levitation based on Arduino board.
 
@@ -38,9 +38,7 @@ Hall sensor can detect and transfer the magnetic field to voltage signal. It's u
 
 #### 3. Operational amplifier
 
-Since the Hall sensor can only output a very small range of voltage, a OP amplifier is used to amplify the voltage signal, as the input signal for Arduino Uno.
-
-### #TODO: Circuit
+Since the Hall sensor can only output a very small range of voltage, a OP amplifier is used to amplify the voltage signal, as the input signal for Arduino Uno. (`LM358N` is used).
 
 #### 4. Motor driver module
 
@@ -50,9 +48,13 @@ Since the Hall sensor can only output a very small range of voltage, a OP amplif
 
 Two stack of magnets are used. One is the floater, another is the magnet on the copper coil, it can counteract the gravity of the floater, in this way only few energy needed for the levitation. 
 
+### Schematic diagram
 
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/Schematic_MagLev.png" style="zoom:30%;" />
 
 ## Algorithm
+
+#TODO: add a flow chart and description.
 
 ### 1. Basic version - PID
 
