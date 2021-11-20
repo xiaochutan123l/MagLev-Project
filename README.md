@@ -16,17 +16,17 @@ There two types of magnet levitation principle: `Pull-up` and `Push-down`. This 
 
 ## Principle
 
-<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/principle.gif" style="zoom:30%;" />
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/principle.gif" width="670" height="600" />
 
-#### #TODO add description
+The principle of the levitation is illustrated as in the Gif. The above magnet provides a pull force which can counteract the gravity of the bottom magnet(floater), this critical position is the `AdjustValue` which we want the floater to float. With the help of the above magnet, the electromagnet(copper coil) needs relatively small force to keep the floater at the critical position. 
 
-
+We can see in this Gif, the levitation process is dynamic. If the floater goes down or up, we can control the coil to produce a pull or push force, by changing the electrodes. The Hall-effect sensor is very sensitive, thus a slight movement of the floater will be detected, and a corresponding controlling for the coil will then be taken. The floater can float stably at a fixed position.
 
 ## Hardware components
 
-<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG" style="zoom:12%;" />
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/bottom-biew2.JPG" width="840" height="1120" />
 
-<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/top-view2.jpg" style="zoom:12%;" />
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/top-view2.jpg" width="840" height="1120" />
 
 #### 1. Arduino Uno (it can be any MCU)
 
@@ -50,17 +50,43 @@ Two stack of magnets are used. One is the floater, another is the magnet on the 
 
 ### Schematic diagram
 
-<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/Schematic_MagLev.png" style="zoom:30%;" />
+<img src="https://github.com/xiaochutan123l/MagLev-Project/blob/main/images/Schematic_MagLev2.png" width="915" height="705" />
 
 ## Algorithm
 
-#TODO: add a flow chart and description.
+The source code is not complicated, so here are just some tips and necessary explanation.
 
 ### 1. Basic version - PID
 
+##### Find the `AdjustValue`: 
+
+Just grab the floater below the coil, move the floater. You can feel in some position the floater is weightless, if you move up the floater a little bit, it will be caught by the above magnet. This position is the `AdjustValue`.
+
+The value can be observed by *Serial Monitor* or a digit display like i used.
+
+##### Tune the PID parameter:
+
+Only `P` and `D` are used. Try different `P` first, find the value that brings the biggest oscillation.
+
+Then try different `D` value which makes floater most stable, this combination of `P` and `D` is the final parameter. 
+
+Tip: try with increasing parameter with large step to roughly find a interval, then determine the prise one.  
+
+##### Filter:
+
+Due to the sensitivity of the Hall sensor and the impact from the environment, a filter is necessary. I used the mean value of multiple reading, it works well for me.
+
 ### 2. Advanced version - Floater detection and weight adaptive
 
+In order to avoid the boring parameter determination process, in the advanced version, the floater detection function is introduced. (the PID parameter should be determined first)
 
+##### Floater detection:
+
+At the very beginning, the initial read value from sensor will be recorded. If the floater comes in, the magnet field will cause a huge change of the read value. The difference of the current read value to the initial value is used to determined if there is a floater comes in or out.
+
+##### Weight adaptive:
+
+The `AdjustValue` is not set at the initial phase any more. Each time after a floater came in, the `AdjustValue` will be set (again). Just grab the floater at the weightless point for a several seconds, the program will find the `AdjustValue`. 
 
 ## References
 
