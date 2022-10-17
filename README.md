@@ -60,15 +60,15 @@ The source code is not complicated, so here are just some tips and necessary exp
 
 ##### Find the `AdjustValue`: 
 
-Just grab the floater below the coil, move the floater. You can feel in some position the floater is weightless, if you move up the floater a little bit, it will be caught by the above magnet. This position is the `AdjustValue`.
+Just grab the floater below the coil, move the floater. You can feel in some position the floater is weightless, if you move up the floater a little bit, it will be caught by the above magnet. A position slight above this banlance point is the `AdjustValue`, at here coil only need to provide repulsive force, the gravity on floater will be compensated by the magnet above.
 
 The value can be observed by *Serial Monitor* or a digit display like i used.
 
 #### Tune the PID parameter:
 
-Only `P` and `D` are used. Try different `P` first, find the value that brings the biggest oscillation.
+Only `P` and `D` are used. Try different `P` first by size, then you can feel the repulsive force on the floater from coil if you move the floater near to the above magnet, keep increase the `P` size, once you see the floater waggles for one or twice becouse of the force from coil and the gravity, that means the `P` value is now a suitable value, the coil can privide enough force to compensate the attractive force from above magnet.
 
-Then try different `D` value which makes floater most stable, this combination of `P` and `D` is the final parameter. 
+Then try different `D` value by size, but exponentially, 0.001-0.01, 0.01-0.1, 0.1-1 an so on. Until floater floats stable, this combination of `P` and `D` is the final parameter. 
 
 Tip: try with increasing parameter with large step to roughly find a interval, then determine the prise one.  
 
