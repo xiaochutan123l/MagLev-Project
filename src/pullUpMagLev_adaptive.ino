@@ -79,18 +79,12 @@ void loop() {
   else if (power < -255){
     power = -255;
   }
-  
+  // only provides push force to floater.
   if (power <= 0){
     flag = false;
     digitalWrite(IN1Pin, flag);  
     digitalWrite(IN2Pin, !flag);
     analogWrite(EA1Pin, -power);
-  }
-  else{
-    flag = true;
-    digitalWrite(IN1Pin, flag);  
-    digitalWrite(IN2Pin, !flag);
-    analogWrite(EA1Pin, power);
   }
 } 
 
